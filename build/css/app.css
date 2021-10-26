@@ -1,0 +1,20 @@
+.header {
+  background-color: #4CB8B3;
+}
+
+.header-title {
+  color: #ffffff;
+}
+
+.navegacion-principal-link {
+  color: #ffffff;
+  margin-right: 2rem;
+  transition: 0.3s;
+}
+.navegacion-principal-link:hover {
+  color: #FEF46D;
+}
+
+.navegacion-principal-link:last-of-type {
+  margin-right: 0;
+}

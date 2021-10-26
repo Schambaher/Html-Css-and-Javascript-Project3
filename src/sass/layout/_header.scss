@@ -1,0 +1,22 @@
+@use "../base/variables" as v;
+
+.header {
+    background-color: v.$verde;
+}
+
+.header-title {
+    color: v.$blanco;
+}
+
+.navegacion-principal-link {
+    color: v.$blanco;
+    margin-right: 2rem;
+    transition: .3s;
+    &:hover {
+        color: v.$amarillo;
+    }
+}
+
+.navegacion-principal-link:last-of-type {
+    margin-right: 0;
+}
