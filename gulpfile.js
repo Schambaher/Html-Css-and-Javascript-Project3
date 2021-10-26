@@ -1,5 +1,6 @@
 const { src, dest, watch } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const plumber = require("gulp-plumber");
 const gulpWebp = require("gulp-webp");
 
 function convertToWebp () {
@@ -9,13 +10,14 @@ function convertToWebp () {
 }
 
 function compileSass () {
-    return src("./src/scss/**/*.scss")
-            .pipe(sass().on("error", sass.logError))
-            .pipe(dest("./build/css"))
+    return src("src/sass/**/*.scss")
+            .pipe(plumber())
+            .pipe(sass())
+            .pipe(dest("build/css"))
 }
 
 function watchSass () {
-    watch("./src/scss/**/*.scss", compileSass);
+    watch("./src/sass/**/*.scss", compileSass);
 }
 
 exports.webp = convertToWebp;
