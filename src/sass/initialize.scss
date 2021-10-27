@@ -24,9 +24,13 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+p {
+    line-height: 1.5;
 }
 
 h1 {
@@ -39,4 +43,9 @@ h2 {
 
 h3 {
     font-size: 3rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
