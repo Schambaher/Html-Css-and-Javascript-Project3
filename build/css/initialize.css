@@ -11,6 +11,9 @@ body {
   font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
 }
+body.fijar-body {
+  overflow: hidden;
+}
 
 .contenedor {
   width: 95%;

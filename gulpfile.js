@@ -52,10 +52,18 @@ function compileSass (done) {
     done();
 }
 
-function watchSass () {
-    watch("./src/sass/**/*.scss", compileSass);
+function compileJavascript (done) {
+    src("src/js/**/*.js")
+        .pipe(dest("build/js"))
+    done();
+}
+
+function watchSassAndJavascript () {
+    watch("src/sass/**/*.scss", compileSass);
+    watch("src/js/**/*.js", compileJavascript);
 }
 
 exports.convertImage = parallel(convertToWebp, convertToPng, convertToAvif);
 exports.sass = compileSass;
-exports.default = watchSass;
+exports.javascript = compileJavascript;
+exports.default = watchSassAndJavascript;

@@ -12,6 +12,10 @@ html {
 body {
     font-size: 1.8rem;
     font-family: base.$fuente-principal;
+
+    &.fijar-body {
+        overflow: hidden;
+    }
 }
 
 .contenedor {
