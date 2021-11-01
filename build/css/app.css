@@ -191,14 +191,14 @@
 .bg-amarillo {
   background-color: #FEF46D;
 }
-.bg-amarillo li:nth-child(odd) {
+.bg-amarillo .escenario-calendario > li:nth-child(odd) {
   background-color: #fdec08;
 }
 
 .bg-verde {
   background-color: #4CB8B3;
 }
-.bg-verde li:nth-child(odd) {
+.bg-verde .escenario-calendario > li:nth-child(odd) {
   background-color: #3b9691;
 }
 
@@ -277,4 +277,73 @@
   font-weight: 700;
   font-size: 3rem;
   cursor: pointer;
+}
+
+.boletos {
+  padding: 5rem 0;
+}
+.boletos h3 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-boletos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.pase {
+  color: #000000;
+}
+.pase-header p, .pase-footer p {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 0.5rem 0;
+}
+.pase-header {
+  background-color: #F53756;
+}
+.pase-header p {
+  font-size: 1.6rem;
+}
+.pase-body {
+  background-color: #ffffff;
+}
+.pase-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pase-body ul li {
+  padding: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.pase-footer {
+  background-color: #752f97;
+}
+.pase-footer p {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+.nombre-pase {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+.footer {
+  background-color: #F53756;
+  padding: 1rem 0;
+}
+.footer p {
+  text-align: center;
+  color: #ffffff;
 }

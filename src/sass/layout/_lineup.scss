@@ -66,7 +66,7 @@
 .bg-amarillo {
   background-color: v.$amarillo;
 
-  li:nth-child(odd) {
+  .escenario-calendario > li:nth-child(odd) {
     background-color: darken(v.$amarillo, 20%);
   }
 }
@@ -74,7 +74,7 @@
 .bg-verde {
   background-color: v.$verde;
 
-  li:nth-child(odd) {
+  .escenario-calendario > li:nth-child(odd) {
     background-color: darken(v.$verde, 10%);
   }
 }
