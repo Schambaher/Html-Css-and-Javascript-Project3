@@ -1,46 +1,54 @@
 @use "../base/variables" as v;
-@use '../base/mixins' as m;
+@use "../base/mixins" as m;
 
 .header {
-    background-color: v.$verde;
+  background-color: v.$verde;
+  @include m.tablet {
+    &.fijo {
+      position: fixed;
+      width: 100%;
+      box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+      top: 0;
+    }
+  }
 }
 
 .contenido-header {
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
-    @include m.tablet {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  @include m.tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .header-title {
-    color: v.$blanco;
-    text-align: center;
+  color: v.$blanco;
+  text-align: center;
 }
 
 .navegacion-principal {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
-    @include m.tablet {
-        flex-direction: row;
-        gap: 2rem;
-    }
+  @include m.tablet {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 
 .navegacion-principal-link {
-    color: v.$blanco;
-    display: block;
-    text-align: center;
-    transition: .3s;
-    &:hover {
-        color: v.$amarillo;
-    }
+  color: v.$blanco;
+  display: block;
+  text-align: center;
+  transition: 0.3s;
+  &:hover {
+    color: v.$amarillo;
+  }
 }
-
